@@ -16,7 +16,6 @@ import org.springframework.web.bind.annotation.RequestBody;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RequestMethod;
 import org.springframework.web.bind.annotation.ResponseBody;
-import org.springframework.web.servlet.mvc.support.RedirectAttributes;
 import org.springframework.web.util.UriComponentsBuilder;
 
 import com.emep.zaixian.model.Article;
@@ -35,7 +34,7 @@ public class ArticleController {
 	}
 	
 	@RequestMapping(value="/all",method=RequestMethod.GET,produces = {"application/json;charset=UTF-8"})
-	@RequiresPermissions("user:view")
+	@RequiresPermissions("resource:view")
 	public @ResponseBody
     String list(Model model) {
         Gson gson = new Gson();
@@ -67,9 +66,9 @@ public class ArticleController {
         return "/News";
     }
 	
-	@RequiresPermissions("user:create")
+	@RequiresPermissions("resource:create")
 	@RequestMapping(value = "/create/", method = RequestMethod.POST)
-    public ResponseEntity<Void> createArticle(@RequestBody Article article,    UriComponentsBuilder ucBuilder) {
+    public ResponseEntity<Void> createArticle(@RequestBody Article article,UriComponentsBuilder ucBuilder) {
         System.out.println("Creating Article " + article.getTitle());
         if (articleService.isArticleExist(article)) {
             System.out.println("A Article with name " + article.getTitle() + " already exist");
@@ -81,4 +80,40 @@ public class ArticleController {
         headers.setLocation(location);
         return new ResponseEntity<Void>(headers, HttpStatus.CREATED);
     }
+	
+	@RequiresPermissions("resource:delete")
+    @RequestMapping(value = "/{id}", method = RequestMethod.DELETE)
+	public ResponseEntity<Article> delete(@PathVariable("id") Long id) {
+		Article article = articleService.findById(id);
+		if (article == null) {
+            System.out.println("Article with id " + id + " not found");
+            return new ResponseEntity<Article>(HttpStatus.NOT_FOUND);
+        }
+		articleService.deleteArticle(id);
+		return new ResponseEntity<Article>(HttpStatus.OK);
+	}
+	
+	//------------------- Update an Article --------------------------------------------------------
+	@RequiresPermissions("resource:update")
+	@RequestMapping(value = "/{id}/update", method = RequestMethod.GET)
+	public String showUpdatePage(@PathVariable("id") Long id, Model model){
+		model.addAttribute("article",articleService.findById(id));
+		model.addAttribute("op", "edit");
+		return "/addNews";
+	}
+	
+	@RequiresPermissions("resource:update")
+    @RequestMapping(value = "/{id}", method = RequestMethod.PUT)
+	public ResponseEntity<Article> update(@PathVariable("id") long id, @RequestBody Article article){
+		System.out.println("Updating Article " + id);
+		Article currentArticle = articleService.findById(id);
+		if (currentArticle == null) {
+            System.out.println("Article with id " + id + " not found");
+            return new ResponseEntity<Article>(HttpStatus.NOT_FOUND);
+        }
+		currentArticle.setTitle(article.getTitle());
+		currentArticle.setContent(article.getContent());
+		articleService.updateArticle(currentArticle);
+		return new ResponseEntity<Article>(currentArticle, HttpStatus.OK);
+	}
 }

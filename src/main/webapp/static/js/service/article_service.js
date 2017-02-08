@@ -5,10 +5,10 @@ angular.module('myApp').factory('ArticleService', ['$http', '$q', function($http
     var REST_SERVICE_URI = '/Article/';
 
     var factory = {
-        fetchAllArticles: fetchAllArticles/*,
+        fetchAllArticles: fetchAllArticles,
+        deleteArticle:deleteArticle/*,
         createUser: createUser,
-        updateUser:updateUser,
-        deleteUser:deleteUser*/
+        updateUser:updateUser*/
     };
 
     return factory;
@@ -59,7 +59,7 @@ angular.module('myApp').factory('ArticleService', ['$http', '$q', function($http
         return deferred.promise;
     }
 
-    function deleteUser(id) {
+    function deleteArticle(id) {
         var deferred = $q.defer();
         $http.delete(REST_SERVICE_URI+id)
             .then(
@@ -67,7 +67,7 @@ angular.module('myApp').factory('ArticleService', ['$http', '$q', function($http
                 deferred.resolve(response.data);
             },
             function(errResponse){
-                console.error('Error while deleting User');
+                console.error('Error while deleting Article');
                 deferred.reject(errResponse);
             }
         );

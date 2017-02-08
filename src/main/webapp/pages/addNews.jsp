@@ -39,6 +39,9 @@
     </style>
     <script src="<c:url value='/resources/lib/jquery-2.1.4.min.js' />"></script>
     <script src="<c:url value='/static/dist/js/wangEditor.js' />"></script>
+    <script>
+    	var articleId = "${article.id}";
+    </script>
     <script src="<c:url value='/static/js/addNews.js' />"></script>
 </head>
 <body>
@@ -58,9 +61,19 @@
 </div>
 <div class="container">
     <div style="line-height:30px;display: inline-block;margin: 10px 10px">标题</div>
-    <div style="display: inline-block;width: 960px"><input id='biaoti' type="text" style="height:25px; width: 960px"/></div>
+    <div style="display: inline-block;width: 960px"><input id='biaoti' type="text" style="height:25px; width: 960px" value="${article.title}"/></div>
     <div id="editor-container" class="container">
-        <div id="editor-trigger"><p>请输入内容</p></div>
+        <div id="editor-trigger">
+        	<c:choose>
+			   <c:when test="${article==null}">
+			   		<p>请输入内容</p>
+			   </c:when>
+			   <c:otherwise>
+			   		${article.content}
+			   </c:otherwise>
+			</c:choose>
+        	<!-- <p>请输入内容</p> -->
+       	</div>
     </div>
     <div id="btn1" class="button blue-button" style="font-size:14px;width:48%;height:25px;margin-top: 10px;margin-left: 20px">保  存</div>
     <div id="btn2" class="button blue-button" style="font-size:14px;width:48%;height:25px;margin-top: 10px">清  空</div>

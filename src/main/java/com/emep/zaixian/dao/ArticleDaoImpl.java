@@ -90,4 +90,17 @@ public class ArticleDaoImpl implements ArticleDao{
 		String sql = "delete from article where id=?";
         jdbcTemplate.update(sql, id);
 	}
+	
+	@Override
+	public Article updateArticle(Article article){
+		final String sql = "update article set title=?, url=?, content=?, date=? where id=?";
+		Date date = new Date();
+		SimpleDateFormat sdf = new SimpleDateFormat("yyyy-MM-dd");
+		String today = sdf.format(date);
+		article.setDate(today);
+        jdbcTemplate.update(
+                sql,
+                article.getTitle(), article.getUrl(), article.getContent(), today, article.getId());
+        return article;
+	}
 }

@@ -71,32 +71,61 @@ $(function () {
         	alert("请输入标题");
         	return;
         }
-        saveEditor(title,'',html);
+        if($.trim(articleId)!=""){
+            saveEditor(title,'',html,'update');
+        }else{
+        	saveEditor(title,'',html,'create');
+        }
     });
     $('#btn2').click(function(){
         $('#biaoti').val('');
+        console.log(articleinfo);
         editor.$txt.html('<p><br></p>');
     });
-    function saveEditor(title,url,content){
-        $.ajax({
-            url: preUrl+"create/",
-            type: "post",
-            async: false,
-//            dataType: "JSON",
-            contentType: "application/json",
-            data: JSON.stringify({'title':title,'url':'','content':content}),
-            success: function(data, textStatus) {
-            	if(textStatus=='success'){
-            		$('.popup').css({
-            			left: ($(window).width() - $('.popup').outerWidth())/2, 
-            			top: ($(window).height() - $('.popup').outerHeight())/2
-            		});
-            		$('.popup').show();
-            		$('.popup').fadeOut(2000);
-            		setTimeout("window.location.href = '/Article/allNews/'",3000);
-            	}
-        	},
-            error:function(result){ console.log(result); }
-        });
+    function saveEditor(title,url,content,todo){
+        if(todo=='create'){
+        	$.ajax({
+	            url: preUrl+"create/",
+	            type: "post",
+	            async: false,
+	//            dataType: "JSON",
+	            contentType: "application/json",
+	            data: JSON.stringify({'title':title,'url':'','content':content}),
+	            success: function(data, textStatus) {
+	            	if(textStatus=='success'){
+	            		$('.popup').css({
+	            			left: ($(window).width() - $('.popup').outerWidth())/2, 
+	            			top: ($(window).height() - $('.popup').outerHeight())/2
+	            		});
+	            		$('.popup').show();
+	            		$('.popup').fadeOut(2000);
+	            		setTimeout("window.location.href = '/Article/allNews/'",2000);
+	            	}
+	        	},
+	            error:function(result){ console.log(result); }
+	        });
+        }else if(todo=="update"){
+        	$.ajax({
+	            url: preUrl+articleId+"/",
+	            type: "PUT",
+	            async: false,
+	//            dataType: "JSON",
+	            contentType: "application/json",
+	            data: JSON.stringify({'title':title,'url':'','content':content}),
+	            success: function(data, textStatus) {
+            		console.log(textStatus);
+	            	if(textStatus=='success'){
+	            		$('.popup').css({
+	            			left: ($(window).width() - $('.popup').outerWidth())/2, 
+	            			top: ($(window).height() - $('.popup').outerHeight())/2
+	            		});
+	            		$('.popup').show();
+	            		$('.popup').fadeOut(2000);
+	            		setTimeout("window.location.href = '/Article/allNews/'",2000);
+	            	}
+	        	},
+	            error:function(result){ console.log(result); }
+	        });
+        }
     }
 });

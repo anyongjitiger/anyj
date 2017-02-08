@@ -21,4 +21,6 @@ public interface ArticleService {
 	public boolean isArticleExist(Article article);
 	
 	public void deleteArticle(Long id);
+	
+	public Article updateArticle(Article article);
 }

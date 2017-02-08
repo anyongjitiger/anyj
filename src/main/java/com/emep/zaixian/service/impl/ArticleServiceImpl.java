@@ -52,4 +52,8 @@ public class ArticleServiceImpl implements ArticleService{
 	public void deleteArticle(Long id){
 		articleDao.deleteArticle(id);
 	}
+	@Override
+	public Article updateArticle(Article article){
+		return articleDao.updateArticle(article);
+	}
 }
