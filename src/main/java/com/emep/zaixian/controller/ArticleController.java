@@ -95,7 +95,7 @@ public class ArticleController {
 	
 	//------------------- Update an Article --------------------------------------------------------
 	@RequiresPermissions("resource:update")
-	@RequestMapping(value = "/{id}/update", method = RequestMethod.GET)
+	@RequestMapping(value = "/update/{id}", method = RequestMethod.GET)
 	public String showUpdatePage(@PathVariable("id") Long id, Model model){
 		model.addAttribute("article",articleService.findById(id));
 		model.addAttribute("op", "edit");
