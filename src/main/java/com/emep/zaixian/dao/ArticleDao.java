@@ -11,4 +11,5 @@ public interface ArticleDao {
 	public Long getNextById(Long id);
 	public Long getPrevById(Long id);
 	public List<Article> getArticles();
+	public void deleteArticle(Long id);
 }

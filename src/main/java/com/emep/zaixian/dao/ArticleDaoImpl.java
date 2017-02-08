@@ -85,4 +85,9 @@ public class ArticleDaoImpl implements ArticleDao{
         }
 		return articleList.get(0).getId();
 	}
+	@Override
+	public void deleteArticle(Long id){
+		String sql = "delete from article where id=?";
+        jdbcTemplate.update(sql, id);
+	}
 }

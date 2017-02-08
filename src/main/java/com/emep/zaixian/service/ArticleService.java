@@ -19,4 +19,6 @@ public interface ArticleService {
 	public Long getPrevById(Long id);
 	
 	public boolean isArticleExist(Article article);
+	
+	public void deleteArticle(Long id);
 }

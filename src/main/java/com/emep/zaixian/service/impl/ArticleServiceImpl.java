@@ -47,4 +47,9 @@ public class ArticleServiceImpl implements ArticleService{
 	public boolean isArticleExist(Article article){
 		return findById(article.getId())!=null;
 	}
+	
+	@Override
+	public void deleteArticle(Long id){
+		articleDao.deleteArticle(id);
+	}
 }
