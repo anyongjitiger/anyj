@@ -4,7 +4,7 @@
 <html>
 <head>
     <title></title>
-    <link rel="stylesheet" href="http://apps.bdimg.com/libs/bootstrap/3.3.4/css/bootstrap.min.css">
+    <link rel="stylesheet" href="https://cdn.bootcss.com/bootstrap/3.3.7/css/bootstrap.min.css">
 	<link rel="stylesheet" href="<c:url value='/resources/css/zhaohe.css'/>"/></link>
 	<script src="<c:url value='/resources/lib/jquery-2.1.4.min.js' />"></script>
 	<script src="<c:url value='/static/angular/angular.min.js' />"></script>
@@ -60,7 +60,7 @@
 	        </tr>
 	        <tr ng-repeat="x in items">
 	            <td>{{ $index + 1 }}</td>
-	            <td ng-bind="x.title" style="cursor: pointer;" ng-click="openUrl(x)"></td>
+	            <td ng-bind="x.title"></td>
 	            <td><button ng-click="edit($index,x.id);">edit</button>
 	            <button ng-click="delete($index,x.id);">delete</button>
 	            </td>
