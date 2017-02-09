@@ -160,6 +160,7 @@
 				/index = anon
 				/pages/index.jsp = anon
 				/Article/update/** = user
+				/Article/editNews = user
 				/addNews = user,sysUser
 				/login = authc
 				/authenticated = authc

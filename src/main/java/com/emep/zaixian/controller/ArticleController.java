@@ -33,6 +33,13 @@ public class ArticleController {
 		return "/allNews";
 	}
 	
+	@RequestMapping("/editNews")
+	@RequiresPermissions("resource:update")
+	String editArticles(Model model) {
+		model.addAttribute("op", "edit");
+		return "/allNews";
+	}
+	
 	@RequestMapping(value="/all",method=RequestMethod.GET,produces = {"application/json;charset=UTF-8"})
 	@RequiresPermissions("resource:view")
 	public @ResponseBody
