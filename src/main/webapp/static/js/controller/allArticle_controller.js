@@ -38,11 +38,7 @@ arapp.controller('editArticleController', ['$scope', 'allArticleService', functi
     	        attrList.splice(i,1);
     	    }
     	}
-    	$scope.setData = function(){
-            $scope.items = $scope.data.slice(($scope.pageSize * ($scope.selPage - 1)), ($scope.selPage * $scope.pageSize));//通过当前页数筛选出表格当前显示数据
-        };
-        $scope.items = $scope.data.slice(0, $scope.pageSize);
-        $scope.selectPage($scope.selPage);
+    	changePageList();
     	deleteArticle(id);
     }
     if(op=='edit'){
@@ -51,7 +47,20 @@ arapp.controller('editArticleController', ['$scope', 'allArticleService', functi
     	$scope.showEdit = false;
     }
     
-
+    function changePageList(){
+    	$scope.setData = function(){
+            $scope.items = $scope.data.slice(($scope.pageSize * ($scope.selPage - 1)), ($scope.selPage * $scope.pageSize));//通过当前页数筛选出表格当前显示数据
+        };
+        $scope.pages = Math.ceil($scope.data.length / $scope.pageSize); //分页数
+        $scope.newPages = $scope.pages > 5 ? 5 : $scope.pages;
+        $scope.items = $scope.data.slice(0, $scope.pageSize);
+        $scope.pageList.splice(0,$scope.pageList.length);
+        for (var i = 0; i < $scope.newPages; i++) {
+            $scope.pageList.push(i + 1);
+        }
+        $scope.selectPage($scope.selPage);
+    }
+    
     function deleteArticle(id){
     	ArticleService.deleteArticle(id)
             .then(function(){console.log('success delete')},

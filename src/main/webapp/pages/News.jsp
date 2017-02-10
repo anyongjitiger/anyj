@@ -25,7 +25,8 @@
 </head>
 <body style='background: url(${pageContext.request.contextPath}/static/img/bgPic.jpg) repeat-x;background-attachment:fixed;'>
     <div class='container'>
-    	<p style="font-size:28px;text-align:center;margin-top:20px;margin-bottom:20px;padding-top:20px">${article.title}</p>
+    	<p style="font-size:28px;text-align:center;margin-top:20px;margin-bottom:20px;padding-top:20px;">${article.title}</p>
+    	<div style = "font-size:14px;text-align:center;padding:10 30;border-style: solid;border-bottom-width: 1px;">${article.date}</div>
     	<div style = "font-size:16px;text-align:left;padding:20 30">${article.content}</div>
     	<div class='jumpto' style= "font-size:16px;padding: 0 30 20 30;">
 	    	<div style="float:right">

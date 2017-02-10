@@ -17,7 +17,7 @@
     <script src="<c:url value='/static/lib/easySlider.js' />"></script>
     <script src="<c:url value='/static/lib/jquery.ui.widget.js' />"></script>
     <script src="<c:url value='/static/lib/jquery.smoothDivScroll-1.0-min.js' />"></script>
-    <script src="<c:url value='/static/angular/angular.min.js' />"></script>
+    <script src="<c:url value='/static/lib/angular/angular.min.js' />"></script>
     <script src="<c:url value='/static/js/app.js' />"></script>
     <script src="<c:url value='/static/js/service/article_service.js' />"></script>
     <script src="<c:url value='/static/js/controller/article_controller.js' />"></script>
