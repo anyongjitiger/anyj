@@ -167,7 +167,7 @@
 				/img/** =anon
 				/image/** =anon
 				/css/** = anon
-				/resources/** = anon
+				/static/** = anon
 				/common/** = anon
 				/js/** = anon
 				/lib/** = anon

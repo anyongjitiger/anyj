@@ -4,8 +4,8 @@
 <html>
 <head>
     <title></title>
-	<link rel="stylesheet" href="<c:url value='/resources/css/zhaohe.css'/>"/></link>
-	<script src="<c:url value='/resources/lib/jquery-2.1.4.min.js' />"></script>
+	<link rel="stylesheet" href="<c:url value='/static/css/zhaohe.css'/>"/></link>
+	<script src="<c:url value='/static/lib/jquery-2.1.4.min.js' />"></script>
 	<style type="text/css">
 	#editor-trigger {
 	height: 700px;
@@ -23,7 +23,7 @@
 	}
 	</style>
 </head>
-<body style='background: url(${pageContext.request.contextPath}/resources/img/bgPic.jpg) repeat-x;background-attachment:fixed;'>
+<body style='background: url(${pageContext.request.contextPath}/static/img/bgPic.jpg) repeat-x;background-attachment:fixed;'>
     <div class='container'>
     	<p style="font-size:28px;text-align:center;margin-top:20px;margin-bottom:20px;padding-top:20px">${article.title}</p>
     	<div style = "font-size:16px;text-align:left;padding:20 30">${article.content}</div>

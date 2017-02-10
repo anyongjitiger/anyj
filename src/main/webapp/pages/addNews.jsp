@@ -11,7 +11,7 @@
     <meta name="keywords" content=""/>
     <meta name="description" content=""/>
     <title>博锋达科技（大连）有限公司</title>
-    <link rel="stylesheet" href="<c:url value='/resources/css/zhaohe.css' />"/></link>
+    <link rel="stylesheet" href="<c:url value='/static/css/zhaohe.css' />"/></link>
     <link rel="stylesheet" href="<c:url value='/static/dist/css/wangEditor.min.css' />"></link>
     <style type="text/css">
         #editor-trigger {
@@ -37,7 +37,7 @@
         	display:none;
         }
     </style>
-    <script src="<c:url value='/resources/lib/jquery-2.1.4.min.js' />"></script>
+    <script src="<c:url value='/static/lib/jquery-2.1.4.min.js' />"></script>
     <script src="<c:url value='/static/dist/js/wangEditor.js' />"></script>
     <script>
     	var articleId = "${article.id}";

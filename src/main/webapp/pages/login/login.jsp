@@ -6,13 +6,13 @@
 <html>
 <head>
 <meta http-equiv="Content-Type" content="text/html; charset=utf-8">
-<%-- <link rel="stylesheet" href="<c:url value='/../resources/css/zhaohe.css' />"/></link> --%>
+<%-- <link rel="stylesheet" href="<c:url value='/../static/css/zhaohe.css' />"/></link> --%>
 <link rel="stylesheet"
-	href="${pageContext.request.contextPath}/resources/css/zhaohe.css">
+	href="${pageContext.request.contextPath}/static/css/zhaohe.css">
 <title>Insert title here</title>
 </head>
 <body
-	style='background: url(${pageContext.request.contextPath}/resources/img/bgPic.jpg) repeat-x'>
+	style='background: url(${pageContext.request.contextPath}/static/img/bgPic.jpg) repeat-x'>
 	<div style='width: 512px; margin: 100px auto; position: relative;'>
 		<p style='padding: 76px 76px 0 76px; font-size: 18px; font-family: "SimHei", Arial;'>账户登录</p>
 		<form action="${pageContext.request.contextPath}/login" method="post">

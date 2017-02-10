@@ -11,12 +11,12 @@
     <meta name="keywords" content=""/>
     <meta name="description" content=""/>
     <title>博锋达科技（大连）有限公司</title>
-    <link rel="stylesheet" href="<c:url value='/resources/css/zhaohe.css' />"/></link>
-    <link rel="Stylesheet" href="<c:url value='/resources/css/smoothDivScroll.css' />"/></link>
-    <script src="<c:url value='/resources/lib/jquery-2.1.4.min.js' />"></script>
-    <script src="<c:url value='/resources/lib/easySlider.js' />"></script>
-    <script src="<c:url value='/resources/lib/jquery.ui.widget.js' />"></script>
-    <script src="<c:url value='/resources/lib/jquery.smoothDivScroll-1.0-min.js' />"></script>
+    <link rel="stylesheet" href="<c:url value='/static/css/zhaohe.css' />"/></link>
+    <link rel="Stylesheet" href="<c:url value='/static/css/smoothDivScroll.css' />"/></link>
+    <script src="<c:url value='/static/lib/jquery-2.1.4.min.js' />"></script>
+    <script src="<c:url value='/static/lib/easySlider.js' />"></script>
+    <script src="<c:url value='/static/lib/jquery.ui.widget.js' />"></script>
+    <script src="<c:url value='/static/lib/jquery.smoothDivScroll-1.0-min.js' />"></script>
     <script src="<c:url value='/static/angular/angular.min.js' />"></script>
     <script src="<c:url value='/static/js/app.js' />"></script>
     <script src="<c:url value='/static/js/service/article_service.js' />"></script>
@@ -60,14 +60,14 @@
 </div>
 <div id="slider">
     <ul class="slides clearfix">
-        <li><img class="responsive" src="<c:url value='/resources/img/9.jpg' />"></li>
-        <li><img class="responsive" src="<c:url value='/resources/img/6.jpg' />"></li>
-        <li><img class="responsive" src="<c:url value='/resources/img/10.jpg' />"></li>
-        <li><img class="responsive" src="<c:url value='/resources/img/11.jpg' />"></li>
+        <li><img class="responsive" src="<c:url value='/static/img/9.jpg' />"></li>
+        <li><img class="responsive" src="<c:url value='/static/img/6.jpg' />"></li>
+        <li><img class="responsive" src="<c:url value='/static/img/10.jpg' />"></li>
+        <li><img class="responsive" src="<c:url value='/static/img/11.jpg' />"></li>
     </ul>
     <ul class="controls">
-        <li><img src="<c:url value='/resources/img/prev.png' />" alt="previous"></li>
-        <li><img src="<c:url value='/resources/img/next.png' />" alt="next"></li>
+        <li><img src="<c:url value='/static/img/prev.png' />" alt="previous"></li>
+        <li><img src="<c:url value='/static/img/next.png' />" alt="next"></li>
     </ul>
     <ul class="pagination">
         <li class="active"></li>
@@ -95,7 +95,7 @@
             <div class="conbox">
                 <ul class="pictxt_left">
                     <li>
-                        <img src="<c:url value='/resources/img/4.jpg' />" width="85" height="58"/>
+                        <img src="<c:url value='/static/img/4.jpg' />" width="85" height="58"/>
                         <h3><a href="/zixunzhongxin/qiyedongtai/2016/1008/244.html">博锋达科技诚邀合作</a></h3>
                         <span>2016年11月20日公司安排明总</span>
                     </li>
@@ -137,15 +137,15 @@
         <div class="scrollingHotSpotRight"></div>
         <div class="scrollWrapper">
             <div class="scrollableArea">
-                <a href="#"><img src="<c:url value='/resources/img/zjzl/DSC_0128.jpg' />" alt="Demo image" width="200" height=200" border="0"/></a>
-                <a href="#"><img src="<c:url value='/resources/img/zjzl/DSC_0129.jpg' />" alt="Demo image" width="200" height="300"/></a>
-                <a href="#"><img src="<c:url value='/resources/img/zjzl/DSC_0130.jpg' />" alt="Demo image" width="200" height="300"/></a>
-                <a href="#"><img src="<c:url value='/resources/img/zjzl/DSC_0131.jpg' />" alt="Demo image" width="200" height="300" id="startAtMe"/></a>
-                <a href="#"><img src="<c:url value='/resources/img/zjzl/DSC_0132.jpg' />" alt="Demo image" width="200" height="300"/></a>
-                <a href="#"><img src="<c:url value='/resources/img/zjzl/DSC_0133.jpg' />" alt="Demo image" width="200" height="300"/></a>
-                <a href="#"><img src="<c:url value='/resources/img/zjzl/DSC_0134.jpg' />" alt="Demo image" width="200" height="300"/></a>
-                <a href="#"><img src="<c:url value='/resources/img/zjzl/DSC_0135.jpg' />" alt="Demo image" width="200" height="300"/> </a>
-                <a href="#"><img src="<c:url value='/resources/img/zjzl/DSC_0136.jpg' />" alt="Demo image" width="200" height="300"/> </a>
+                <a href="#"><img src="<c:url value='/static/img/zjzl/DSC_0128.jpg' />" alt="Demo image" width="200" height=200" border="0"/></a>
+                <a href="#"><img src="<c:url value='/static/img/zjzl/DSC_0129.jpg' />" alt="Demo image" width="200" height="300"/></a>
+                <a href="#"><img src="<c:url value='/static/img/zjzl/DSC_0130.jpg' />" alt="Demo image" width="200" height="300"/></a>
+                <a href="#"><img src="<c:url value='/static/img/zjzl/DSC_0131.jpg' />" alt="Demo image" width="200" height="300" id="startAtMe"/></a>
+                <a href="#"><img src="<c:url value='/static/img/zjzl/DSC_0132.jpg' />" alt="Demo image" width="200" height="300"/></a>
+                <a href="#"><img src="<c:url value='/static/img/zjzl/DSC_0133.jpg' />" alt="Demo image" width="200" height="300"/></a>
+                <a href="#"><img src="<c:url value='/static/img/zjzl/DSC_0134.jpg' />" alt="Demo image" width="200" height="300"/></a>
+                <a href="#"><img src="<c:url value='/static/img/zjzl/DSC_0135.jpg' />" alt="Demo image" width="200" height="300"/> </a>
+                <a href="#"><img src="<c:url value='/static/img/zjzl/DSC_0136.jpg' />" alt="Demo image" width="200" height="300"/> </a>
             </div>
         </div>
     </div>

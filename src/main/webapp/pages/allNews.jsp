@@ -5,8 +5,8 @@
 <head>
     <title></title>
     <link rel="stylesheet" href="https://cdn.bootcss.com/bootstrap/3.3.7/css/bootstrap.min.css">
-	<link rel="stylesheet" href="<c:url value='/resources/css/zhaohe.css'/>"/></link>
-	<script src="<c:url value='/resources/lib/jquery-2.1.4.min.js' />"></script>
+	<link rel="stylesheet" href="<c:url value='/static/css/zhaohe.css'/>"/></link>
+	<script src="<c:url value='/static/lib/jquery-2.1.4.min.js' />"></script>
 	<script src="<c:url value='/static/angular/angular.min.js' />"></script>
     <script src="<c:url value='/static/js/service/allArticle_service.js' />"></script>
     <script src="<c:url value='/static/js/controller/allArticle_controller.js' />"></script>
@@ -40,7 +40,7 @@
     }
 	</style>
 </head>
-<body ng-app="articleApp" style='background: url(${pageContext.request.contextPath}/resources/img/bgPic.jpg) repeat-x;background-attachment:fixed;'>
+<body ng-app="articleApp" style='background: url(${pageContext.request.contextPath}/static/img/bgPic.jpg) repeat-x;background-attachment:fixed;'>
     <div class='container' ng-controller="allArticleController" ng-show="showAll">
     	<p style="font-size:28px;text-align:center;margin-top:20px;margin-bottom:20px;padding-top:20px;">${article.title}</p>
     	<ul class="newslist">
