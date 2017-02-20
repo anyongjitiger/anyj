@@ -1,9 +1,6 @@
-/*å…¨å±€æ ·å¼å¼€å§‹*/
-
 body {
     width: 100%;
     min-width: 1200px;
-    font-family: "微软雅黑";
     font-family: Helvetica,"Hiragino Sans GB","Microsoft Yahei",sans-serif,Arial, sans-serif;
     margin: 0 auto;
     padding: 0;
@@ -16,6 +13,19 @@ div, form, ul, ol, li, span, p, dl, dd, dt {
     padding: 0;
     border: 0;
 }
+
+.headerinner a {
+    position: relative;
+    display: inline-block;
+    outline: none;
+    text-decoration: none;
+    color: #000;
+    font-size: 12px;
+    }
+
+.headerinner a:hover::before, a:hover::after { position: absolute; }
+.headerinner a:hover::before { content: "\5B"; left: -10px; }
+.headerinner a:hover::after { content: "\5D"; right:  -10px; }
 
 img, a img {
     border: 0;
@@ -53,17 +63,11 @@ a:hover {
     clear: both;
 }
 
-/*å…¨å±€æ ·å¼ç»“æŸ*/
-
-/*æ€»ä½“ç»“æž„æ ·å¼å¼€å§‹*/
 .top, .nei_mainbox, .menubox, .bigpic, .mainbox {
     width: 1024px;
     margin: 0 auto;
 }
 
-/*æ€»ä½“ç»“æž„æ ·å¼ç»“æŸ*/
-
-/*topæ ·å¼å¼€å§‹*/
 .top {
     height: 86px;
     /*background: url(../img/topbg.jpg) repeat-x;*/
@@ -113,9 +117,6 @@ a:hover {
     margin-bottom: 8px;
 }
 
-/*topæ ·å¼ç»“æŸ*/
-
-/*å¹»ç¯æ ·å¼å¼€å§‹ï¼Œft-\ft-button-\ft-button-id-activeæ˜¯åŸºæœ¬æ ·å¼*/
 .bigpic {
     position: relative;
 }
@@ -126,14 +127,12 @@ a:hover {
     text-align: left;
 }
 
-/*å¦‚æžœå›¾ç‰‡æœ‰altä¼šæœ‰ä¸‹æ–¹çš„æ ‡é¢˜æ˜¾ç¤ºï¼Œè¿™ä¸ªå°±æ˜¯æ ‡é¢˜çš„æ ·å¼*/
 .ft-prev, .ft-next {
     background-color: #000;
     padding: 0 10px;
     display: none;
 }
 
-/*å·¦å³ä¸Šä¸€å¹…ä¸‹ä¸€å¹…æŒ‰é’®ï¼ŒçŽ°åœ¨ä¸ºéšè—*/
 #ft-buttons-huandeng {
     position: absolute;
     bottom: 10px;
@@ -155,7 +154,6 @@ a.ft-button-huandeng {
     padding: 0 2px;
 }
 
-/*æ•°å­—åŸºæœ¬æ ·å¼*/
 a.ft-button-huandeng-active {
     font-weight: bold;
     color: #C00;
@@ -230,9 +228,6 @@ a.ft-button-huandeng-active {
     overflow: hidden;
 }
 
-/*å†…å®¹åŒºæ ·å¼ç»“æŸ*/
-
-/*é¦–é¡µå…ƒç´ æ ·å¼å¼€å§‹*/
 .mainbox .gsjj {
     background: url(../img/gsjjbg.jpg) no-repeat;
     height: 56px;
@@ -380,9 +375,6 @@ a.red {
     color: #ccc;
 }
 
-/*å†…é¡µå¸ƒå±€æ ·å¼å¼€å§‹*/
-
-/*é¦–é¡µå…ƒç´ æ ·å¼å¼€å§‹*/
 .piclist {
     padding: 10px 5px;
     width: 685px;
@@ -484,9 +476,6 @@ a.red {
     padding: 0 10px;
 }
 
-/*é¦–é¡µå…ƒç´ æ ·å¼ç»“æŸ*/
-
-/*footæ ·å¼å¼€å§‹*/
 .foot {
     font-size: 12px;
     margin: 0 auto;
@@ -503,8 +492,6 @@ a.red {
     margin: 0;
     float: right;
 }
-
-/*footæ ·å¼ç»“æŸ*/
 
 DIV.black2 {
     PADDING-RIGHT: 7px;
@@ -574,7 +561,6 @@ DIV.black2 SPAN.disabled {
     BORDER-BOTTOM: #dadada 1px solid
 }
 
-/*公共头部样式*/
 .header {
     width: 100%;
     height: 50px;
@@ -593,7 +579,6 @@ DIV.black2 SPAN.disabled {
 
 }
 
-/* 导航部分 */
 .headernav {
     width: 100%;
     overflow: hidden;
