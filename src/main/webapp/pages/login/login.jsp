@@ -1,15 +1,12 @@
-<%@ page language="java" contentType="text/html; charset=utf-8"
-	pageEncoding="utf-8"%>
+<%@ page language="java" contentType="text/html; charset=utf-8" pageEncoding="utf-8"%>
 <%@taglib prefix="shiro" uri="http://shiro.apache.org/tags"%>
 <!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN"
-        "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+	"http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
 <html>
 <head>
-<meta http-equiv="Content-Type" content="text/html; charset=utf-8">
-<%-- <link rel="stylesheet" href="<c:url value='/../static/css/zhaohe.css' />"/></link> --%>
-<link rel="stylesheet"
-	href="${pageContext.request.contextPath}/static/css/zhaohe.css">
-<title>Insert title here</title>
+	<meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+	<link rel="stylesheet" href="${pageContext.request.contextPath}/static/css/web.css">
+	<title>Insert title here</title>
 </head>
 <body
 	style='background: url(${pageContext.request.contextPath}/static/img/bgPic.jpg) repeat-x'>

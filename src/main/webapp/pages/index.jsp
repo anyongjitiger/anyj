@@ -10,7 +10,7 @@
     <meta name="keywords" content=""/>
     <meta name="description" content=""/>
     <title>博锋达科技（大连）有限公司</title>
-    <link rel="stylesheet" href="<c:url value='/static/css/zhaohe.css' />"/></link>
+    <link rel="stylesheet" href="<c:url value='/static/css/web.css' />"/></link>
     <link rel="Stylesheet" href="<c:url value='/static/css/smoothDivScroll.css' />"/></link>
     <script src="<c:url value='/static/lib/jquery-2.1.4.min.js' />"></script>
     <script src="<c:url value='/static/lib/easySlider.js' />"></script>
@@ -44,12 +44,12 @@
     });
 </script>
 <div class="top">
-    <div class="left"><a href="/index.html"></a></div>
+    <div class="left"><a href="/"></a></div>
 </div>
 <div class="header">
     <div class="headerinner">
         <ul class="headernav">
-            <li><a href="#">首页</a></li>
+            <li><a href="/">首页</a></li>
             <li><a href="#">公司简介</a></li>
             <li><a href="#">产品展示</a></li>
             <li><a href="#">联系方式</a></li>

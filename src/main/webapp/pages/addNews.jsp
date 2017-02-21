@@ -11,7 +11,7 @@
     <meta name="keywords" content=""/>
     <meta name="description" content=""/>
     <title>博锋达科技（大连）有限公司</title>
-    <link rel="stylesheet" href="<c:url value='/static/css/zhaohe.css' />"/></link>
+    <link rel="stylesheet" href="<c:url value='/static/css/web.css' />"/></link>
     <link rel="stylesheet" href="<c:url value='/static/dist/css/wangEditor.min.css' />"></link>
     <style type="text/css">
         #editor-trigger {

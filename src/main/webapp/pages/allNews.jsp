@@ -5,7 +5,7 @@
 <head>
     <title></title>
     <link rel="stylesheet" href="https://cdn.bootcss.com/bootstrap/3.3.7/css/bootstrap.min.css">
-	<link rel="stylesheet" href="<c:url value='/static/css/zhaohe.css'/>"/></link>
+	<link rel="stylesheet" href="<c:url value='/static/css/web.css'/>"/></link>
 	<script src="<c:url value='/static/lib/jquery-2.1.4.min.js' />"></script>
 	<script src="<c:url value='/static/lib/angular/angular.min.js' />"></script>
     <script src="<c:url value='/static/js/service/allArticle_service.js' />"></script>

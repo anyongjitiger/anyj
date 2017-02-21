@@ -3,7 +3,7 @@
 <html>
 <head>
     <title></title>
-	<link rel="stylesheet" href="<c:url value='/static/css/zhaohe.css'/>"/></link>
+	<link rel="stylesheet" href="<c:url value='/static/css/web.css'/>"/></link>
 	<script src="<c:url value='/static/lib/jquery-2.1.4.min.js' />"></script>
 	<style type="text/css">
 	#editor-trigger {
