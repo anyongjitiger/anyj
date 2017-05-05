@@ -89,7 +89,7 @@
         <div class="box2">
             <div class="title">
                 <a href="/Article/allNews" class="more" >more</a>
-                <a href="/zixunzhongxin/index.html">企业动态<span>&nbsp;/&nbsp;Group Dynamics</span></a>
+                <a href="/Article/allNews">企业动态<span>&nbsp;/&nbsp;Group Dynamics</span></a>
             </div>
             <div class="conbox">
                 <ul class="pictxt_left">

@@ -37,7 +37,7 @@
 	</bean>
 
 	<!-- 自动扫描controller包下的所有类，使其认为spring mvc的控制器     mpc 2016.08.29-->
-	<context:component-scan base-package="com.emep.zaixian">
+	<context:component-scan base-package="com.emep.zaixian.controller">
 	</context:component-scan>
 	<!-- mpc 2016.08.29  重新定义的annotation-driven，spring4特有的配置 -->
 	<mvc:annotation-driven>

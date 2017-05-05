@@ -141,7 +141,7 @@
 		<property name="loginUrl" value="/login" />
 	</bean>
 
-    <!--用户过滤起  -->
+    <!--用户过滤器  -->
 	<bean id="sysUserFilter" class="com.emep.zaixian.security.web.shiro.filter.SysUserFilter" />
 
 	<!-- Shiro的Web过滤器 -->

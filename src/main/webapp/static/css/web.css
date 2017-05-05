@@ -13,7 +13,10 @@ div, form, ul, ol, li, span, p, dl, dd, dt {
     padding: 0;
     border: 0;
 }
-
+a:visited
+{
+	color:yellow;
+}
 .headerinner a {
     position: relative;
     display: inline-block;
